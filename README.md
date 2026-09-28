@@ -319,9 +319,12 @@ If you use this code or the released artifacts, please cite:
 
 ```bibtex
 @inproceedings{yang2026provfusion,
-  title   = {Beyond Nodes vs. Edges: A Multi-View Fusion Framework for
-             Provenance-Based Intrusion Detection},
-  author  = {Yang, Fan and Xu, Binyan and Tang, Di and Zhang, Kehuan},
-  year    = {2026}
+  title     = {Beyond Nodes vs. Edges: A Multi-View Fusion Framework
+               for Provenance-Based Intrusion Detection},
+  author    = {Yang, Fan and Xu, Binyan and Tang, Di and Zhang, Kehuan},
+  booktitle = {Proceedings of the IEEE Symposium on Security and Privacy (S\&P)},
+  year      = {2026}
 }
 ```
+
+Questions / issues: open a GitHub issue or contact yf020@ie.cuhk.edu.hk.
