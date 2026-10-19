@@ -318,13 +318,16 @@ the E5 / OPTC variants.
 If you use this code or the released artifacts, please cite:
 
 ```bibtex
-@inproceedings{yang2026provfusion,
-  title     = {Beyond Nodes vs. Edges: A Multi-View Fusion Framework
-               for Provenance-Based Intrusion Detection},
-  author    = {Yang, Fan and Xu, Binyan and Tang, Di and Zhang, Kehuan},
-  booktitle = {Proceedings of the IEEE Symposium on Security and Privacy (S\&P)},
-  year      = {2026}
-}
+@INPROCEEDINGS{ProvFusion,
+  author={Yang, Fan and Xu, Binyan and Tang, Di and Zhang, Kehuan},
+  booktitle={2026 IEEE Symposium on Security and Privacy (SP)}, 
+  title={Beyond Nodes vs. Edges: A Multi-View Fusion Framework for Provenance-Based Intrusion Detection}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={3739-3758},
+  keywords={Modeling;Signal detection;Detectors;Printing;Voting;Conferences;Security;Timing;Training;Intrusion detection;intrusion detection and prevention},
+  doi={10.1109/SP63933.2026.00242}}
 ```
 
 Questions / issues: open a GitHub issue or contact yf020@ie.cuhk.edu.hk.
