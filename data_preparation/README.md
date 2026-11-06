@@ -35,6 +35,10 @@ The final "publish" step exposes the produced `edge_embeds` dir as `../raw_data/
 (default: a **symlink**, no data duplication), so the existing loader finds it with zero
 code changes.
 
+For the three DARPA OpTC hosts (`OPTC_h201`, `OPTC_h051`, `OPTC_h501`), use the additive
+OpTC entry point and its host-specific ingester; see `optc/README.md` for the complete
+raw-log → labels → merged data → training sequence. The TC commands below are unchanged.
+
 ## Usage (run from the OpenProvFusion project root, inside the `orthrus` conda env)
 
 ```bash

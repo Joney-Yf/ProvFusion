@@ -273,6 +273,59 @@ DATASET_DEFAULT_CONFIG = {
                # ["E3-CLEARSCOPE/node_clearscope_e3_firefox_0412.csv", '2018-04-12 15:18:00', '2018-04-12 15:25:00'],
           ],
      },
+
+     # --- OpTC hosts (ADDITIVE; used only by data_preparation/optc/, TC unchanged) ---
+     "OPTC_h201": {
+          "raw_dir": "/path/to/DARPA_OpTC/extracted/h201/",  # NOTE: set via local_config.json
+          "database": "optc_h201",
+          "database_all_file": "optc_h201",
+          "num_node_types": 3,
+          "num_edge_types": 10,
+          "year_month": "2019-09",
+          "start_end_day_range": (15, 26),
+          "train_files": ["graph_19", "graph_20", "graph_21"],
+          "val_files": ["graph_22"],
+          "test_files": ["graph_23", "graph_24", "graph_25"],
+          "unused_files": ["graph_16", "graph_17", "graph_18"],
+          "ground_truth_relative_path": ["OPTC-h201/node_h201_0923.csv"],
+          "attack_to_time_window": [
+               ["OPTC-h201/node_h201_0923.csv", '2019-09-23 11:23:00', '2019-09-23 13:25:00'],
+          ],
+     },
+     "OPTC_h501": {
+          "raw_dir": "/path/to/DARPA_OpTC/extracted/h501/",  # NOTE: set via local_config.json
+          "database": "optc_h501",
+          "database_all_file": "optc_h501",
+          "num_node_types": 3,
+          "num_edge_types": 10,
+          "year_month": "2019-09",
+          "start_end_day_range": (15, 26),
+          "train_files": ["graph_19", "graph_20", "graph_21"],
+          "val_files": ["graph_22"],
+          "test_files": ["graph_23", "graph_24", "graph_25"],
+          "unused_files": ["graph_16", "graph_17", "graph_18"],
+          "ground_truth_relative_path": ["OPTC-h501/node_h501_0924.csv"],
+          "attack_to_time_window": [
+               ["OPTC-h501/node_h501_0924.csv", '2019-09-24 10:28:00', '2019-09-24 15:29:00'],
+          ],
+     },
+     "OPTC_h051": {
+          "raw_dir": "/path/to/DARPA_OpTC/extracted/h051/",  # NOTE: set via local_config.json
+          "database": "optc_h051",
+          "database_all_file": "optc_h051",
+          "num_node_types": 3,
+          "num_edge_types": 10,
+          "year_month": "2019-09",
+          "start_end_day_range": (15, 26),
+          "train_files": ["graph_19", "graph_20", "graph_21"],
+          "val_files": ["graph_22"],
+          "test_files": ["graph_23", "graph_24", "graph_25"],
+          "unused_files": ["graph_16", "graph_17", "graph_18"],
+          "ground_truth_relative_path": ["OPTC-h051/node_h051_0925.csv"],
+          "attack_to_time_window": [
+               ["OPTC-h051/node_h051_0925.csv", '2019-09-25 10:29:00', '2019-09-25 14:25:00'],
+          ],
+     },
 }
 
 def get_default_cfg(args):
@@ -654,6 +707,34 @@ rel2id = {
         'EVENT_WRITE': 9,
         10: 'EVENT_CLONE',
         'EVENT_CLONE': 10,
+    }
+
+# OpTC relation vocabulary — ADDITIVE. Only data_preparation/optc/ uses it
+# (prepare_data_optc.py patches the module-level `rel2id` process-locally at startup);
+# TC stages keep using `rel2id` above and are never affected.
+OPTC_DATASETS = {"OPTC_h201", "OPTC_h051", "OPTC_h501"}
+
+rel2id_optc = {
+        1: 'OPEN',
+        'OPEN': 1,
+        2: 'READ',
+        'READ': 2,
+        3: 'CREATE',
+        'CREATE': 3,
+        4: 'MESSAGE',
+        'MESSAGE': 4,
+        5: 'MODIFY',
+        'MODIFY': 5,
+        6: 'START',
+        'START': 6,
+        7: 'RENAME',
+        'RENAME': 7,
+        8: 'DELETE',
+        'DELETE': 8,
+        9: 'TERMINATE',
+        'TERMINATE': 9,
+        10: 'WRITE',
+        'WRITE': 10,
     }
 
 ntype2id ={

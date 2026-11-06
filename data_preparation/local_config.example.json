@@ -11,6 +11,9 @@
     "CADETS_E5":     { "raw_dir": "/path/to/DARPA_TC/E5/cadets/json_file/" },
     "CADETS_E3":     { "raw_dir": "/path/to/DARPA_TC/E3/cadets/json_file/" },
     "CLEARSCOPE_E5": { "raw_dir": "/path/to/DARPA_TC/E5/clearscope/json_file/" },
-    "CLEARSCOPE_E3": { "raw_dir": "/path/to/DARPA_TC/E3/clearscope/json_file/" }
+    "CLEARSCOPE_E3": { "raw_dir": "/path/to/DARPA_TC/E3/clearscope/json_file/" },
+    "OPTC_h201":     { "raw_dir": "/path/to/DARPA_OpTC/extracted/h201/" },
+    "OPTC_h051":     { "raw_dir": "/path/to/DARPA_OpTC/extracted/h051/" },
+    "OPTC_h501":     { "raw_dir": "/path/to/DARPA_OpTC/extracted/h501/" }
   }
 }

@@ -93,6 +93,27 @@ DATASETS = {
         "legacy_gt": os.path.expanduser("~/guard/Ground_Truth/ground_truth_nids_clearscope_e5.pt"),
         "legacy_map": os.path.join(_V3_DIR, "CLEARSCOPE_E5_attack_to_nids.pt"),
     },
+    "OPTC_h201": {
+        "csvs_and_windows": [
+            ("OPTC-h201/node_h201_0923.csv", [1569252180000000000, 1569259500000000000]),
+        ],
+        "legacy_gt": os.path.expanduser("~/guard/Ground_Truth/ground_truth_nids_optc_h201.pt"),
+        "legacy_map": os.path.join(_V3_DIR, "OPTC_h201_attack_to_nids.pt"),
+    },
+    "OPTC_h501": {
+        "csvs_and_windows": [
+            ("OPTC-h501/node_h501_0924.csv", [1569335280000000000, 1569353340000000000]),
+        ],
+        "legacy_gt": os.path.expanduser("~/guard/Ground_Truth/ground_truth_nids_optc_h501.pt"),
+        "legacy_map": os.path.join(_V3_DIR, "OPTC_h501_attack_to_nids.pt"),
+    },
+    "OPTC_h051": {
+        "csvs_and_windows": [
+            ("OPTC-h051/node_h051_0925.csv", [1569421740000000000, 1569435900000000000]),
+        ],
+        "legacy_gt": os.path.expanduser("~/guard/Ground_Truth/ground_truth_nids_optc_h051.pt"),
+        "legacy_map": os.path.join(_V3_DIR, "OPTC_h051_attack_to_nids.pt"),
+    },
 }
 
 
