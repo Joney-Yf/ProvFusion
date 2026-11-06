@@ -116,7 +116,6 @@ and evaluates it automatically.
 
 The root README lists the selected OpTC Option-D checkpoints, their pinned merged data,
 and matching regenerated labels. **Replay those exact artifacts with Option A to reproduce
-the listed TP/FP values.** Fresh regeneration and retraining are stochastic: Word2Vec
-creates a new embedding draw, and the shuffled multi-worker edge-reconstruction head makes
-training non-bit-reproducible even with a fixed seed. The selected rows are observed draws,
-not guaranteed or necessarily typical single-run outcomes.
+the listed TP/FP values.** Fresh regeneration and retraining can vary across runs because
+of Word2Vec and shuffled, multi-worker data loading; the released checkpoint and its pinned
+artifacts are the exact reproduction path.

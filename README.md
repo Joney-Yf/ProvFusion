@@ -95,13 +95,10 @@ The ground truth and attack map must come from the same regenerated ingestion:
 | OPTC_h501 | `optc_h501_regen15.pt` | `OPTC_h501_regen_ground_truth_nids.pt` + `OPTC_h501_regen_attack_to_nids.pt` |
 
 > **On randomness.** Checkpoint evaluation is deterministic for fixed code and the exact
-> released checkpoint, merged data, ground truth, and attack map. Retraining is stochastic
-> even with `--seeds 1` because the edge-reconstruction head uses shuffled, multi-worker
-> data loading; fresh raw-log regeneration also adds Word2Vec variability. Option-D rows
-> are selected observed runs, not guaranteed single-run training outcomes. In the recorded
-> fixed-data OpTC sweeps, the exact listed row occurred in 1/7 (h051), 1/26 (h201), and
-> 1/24 (h501) draws. To reproduce a row exactly, replay its pinned artifacts with Option A;
-> do not substitute another regenerated embedding.
+> released checkpoint, merged data, ground truth, and attack map. Retraining uses shuffled,
+> multi-worker data loading, and fresh raw-log regeneration adds Word2Vec variability, so
+> TP/FP can vary across runs. The released checkpoints and pinned artifacts provide the
+> exact reproduction path (Option A).
 
 ---
 
